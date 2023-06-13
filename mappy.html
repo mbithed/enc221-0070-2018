@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ENC221-0070/2018</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <style>
+    #map {
+      height: 700px;
+      left:0;
+    }
+    .bar{
+      background-color: white;
+      margin: 0;
+    }
+    .shead{
+      color:#000;
+      text-align: center;
+      width: 100%;
+      
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <h1 class="shead"><b>HOTELS IN NAKURU</b></h1>
+  </div>
+  <div id="map"></div>
+
+  <script>
+    // Initialize the map
+    var map = L.map('map').setView([-0.2815418239544012, 36.07692152141019], 13);
+
+    // Add the tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      maxZoom: 18,
+    }).addTo(map);
+
+    // Add markers with custom popups
+    var marker1 = L.marker([-0.28150478281650265, 36.0891650417562]).addTo(map);
+    marker1.bindPopup("<b>Sarova Woodlands Hotel and Spar</b>").openPopup();
+    var marker2 = L.marker([-0.2687771849067953, 36.07711135165766]).addTo(map);
+    marker2.bindPopup("<b>The Alps Hotel</b>").openPopup();
+    var marker3 = L.marker([-0.29726307520131334, 36.072741275800794]).addTo(map);
+    marker3.bindPopup("<b>Chester hotel</b>").openPopup();
+    var marker4 = L.marker([-0.28400452444671287, 36.06944911714525]).addTo(map);
+    marker4.bindPopup("<b>Mericca hotel</b>").openPopup();
+    var marker5 = L.marker([-0.27491716459403376, 36.102111906784]).addTo(map);
+    marker5.bindPopup("<b>Mara Hill Hotel</b>").openPopup();
+    var marker6= L.marker([-0.3082847753661054, 36.0880417430117]).addTo(map);
+    marker6.bindPopup("<b>Blinker Hotel</b>").openPopup();
+    
+
+  </script>
+</body>
+</html>
